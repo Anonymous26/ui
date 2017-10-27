@@ -39,7 +39,7 @@
       </div>
       <div class="navbar navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand">Album {{message}}</a>
+          <a href="#" class="navbar-brand">Smart Doc</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -51,56 +51,28 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Album example</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-          <p>
-            <a href="#" class="btn btn-primary">Main call to action</a>
-            <a href="#" class="btn btn-secondary">Secondary action</a>
-          </p>
+          <h1 class="jumbotron-heading">Welcome, {{user}}</h1>
+          <p class="lead text-muted"> Select files to upload.</p>
+          <div>
+            <label class="custom-file">
+              <input type="file" multiple id="file" @change="processFile($event)" class="custom-file-input">
+              <span class="custom-file-control">{{uploadFieldName.name}}</span>
+            </label>
+            <a href="#" id="uploadit" class="btn btn-primary mt-1" v-bind:class="{'disabled': uploadFieldName==''}">Upload</a>
+          </div>
         </div>
       </section>
 
       <div class="album text-muted">
         <div class="container">
-
           <div class="row">
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+            <div class="card" v-for="file in files">
+              <img src="http://via.placeholder.com/300x150?text=today">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="w-100"></div>
+            <div class="mx-auto">
+              <button class="btn btn-primary" v-bind:class="{'disabled': busy}">Load Next</button>
             </div>
           </div>
 
@@ -114,8 +86,6 @@
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
       </div>
     </footer>
   </div>
