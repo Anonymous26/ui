@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('password');
+            $table->string('token');
             $table->string('public_key');
             $table->string('private_key');
             $table->integer('role')->default(1);
