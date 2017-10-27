@@ -14,24 +14,34 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" id="app">
       <div class="mt-5">
-        <h1 class="text-center">Smart Reports</h1>
+        <h1 class="text-center">Smart Reports {{doc}}</h1>
         <h2 class="text-center mt-5" style="font-weight: 300">I am a...</h2>
         <div class="row" style="margin-top: 130px;">
           <div class="col-sm pr-5" style="border-right: 3px solid #EAEAEA">
            <div class="row">
                <div class="col-sm mb-sm-5">
-                <a class="btn btn-lg btn-outline-primary float-sm-right" style="width: 150px;" href="../../components/navbar/" role="button"> Doctor </a>
+                <a class="btn btn-lg btn-outline-primary float-sm-right" v-bind:class='{ "active": doc }' style="width: 150px;" href="#" v-on:click="update(0)" role="button"> Doctor </a>
               </div>
               <div class="w-100"></div>
               <div class="col-sm mt-5">
-                <a class="btn btn-lg btn-outline-success float-sm-right" style="width: 150px;" href="../../components/navbar/" role="button"> Hospital </a>
+                <a class="btn btn-lg btn-outline-success float-sm-right" v-bind:class='{ "active": hos }' style="width: 150px;" href="#" v-on:click="update(1)" role="button"> Hospital </a>
               </div>
             </div>
           </div>
           <div class="col-sm mt-sm-3 pt-5 pl-sm-5">
-            <a class="btn btn-lg btn-outline-secondary float-sm-left" style="width: 150px;" href="../../components/navbar/" role="button">Patient</a>
+            <a class="btn btn-lg btn-outline-secondary float-sm-left" v-bind:class='{ "active": pat }' style="width: 150px;" href="#" v-on:click="update(2)" role="button">Patient</a>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-sm-8 offset-sm-2">
+            <div class="input-group input-group-lg" v-show="doc || hos || pat">
+              <input type="text" class="form-control" placeholder="your@email.id" aria-label="Your email id">
+              <span class="input-group-btn">
+                <button class="btn btn-dark" type="button">Login</button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
