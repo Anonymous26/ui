@@ -15,8 +15,10 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => 'pubkey-2af31d9413b9da501670a0f6743c15ca',
+        // env('MAILGUN_DOMAIN'),
+        'secret' => 'key-638c552b3bbad8c00ea6de3473f99d39'
+        // env('MAILGUN_SECRET'),
     ],
 
     'ses' => [
@@ -33,6 +35,9 @@ return [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
+    ],
+    'sendgrid' => [
+        'api_key' => env('SENDGRID_API_KEY'),
     ],
 
 ];

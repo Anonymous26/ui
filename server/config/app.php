@@ -177,6 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Sichikawa\LaravelSendgridDriver\SendgridTransportServiceProvider::class
+        Clarification\MailDrivers\Sendgrid\SendgridServiceProvider::class,
+
     ],
 
     /*

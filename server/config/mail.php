@@ -16,7 +16,8 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => 'smtp',
+    // env('MAIL_DRIVER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +30,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => 'smtp.gmail.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -84,9 +85,11 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => 'xyaxis12@gmail.com',
+    // env('MAIL_USERNAME'),
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => 'Piyush#2016',
+    // env('MAIL_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------------
