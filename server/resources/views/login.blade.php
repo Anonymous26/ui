@@ -54,7 +54,7 @@
     <script src="./js/bootstrap/popper.min.js"></script>
     <script src="./js/bootstrap/bootstrap.min.js"></script>
     <script src="./js/vue.min.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="./js/a1.js"></script>
     <script src="https://use.fontawesome.com/9f0b2b725d.js"></script>
 
   </body>
