@@ -22,18 +22,51 @@
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
           <div class="row">
-            <div class="col-sm-8 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+            <div class="col-lg-6">
+             <div class="input-group pt-4">
+               <input type="text" class="form-control" placeholder="person@email.id" aria-label="person@email.id">
+               <span class="input-group-btn">
+                <button class="btn btn-info" type="button">Share</button>
+               </span>
+              </div>
             </div>
-            <div class="col-sm-4 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
+            <!-- <div class="col-sm-8 py-4"> -->
+              <!-- <div class="input-group input-group-lg" v-show="doc || hos || pat"> -->
+              <!-- <input type="text" class="form-control" placeholder="your@email.id" aria-label="Your email id">
+              <span class="input-group-btn">
+                <button class="btn btn-dark" type="button">Login</button>
+              </span>
+            </div> -->
+             <!--  <h4 class="text-white">About</h4>
+              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p> -->
+            </div>
+              <div class="row">
+          <div class="col-xs-3 pt-3 pl-4">
+            <img class="rounded-circle" src="http://via.placeholder.com/60x60?text=S" alt="Generic placeholder image" width="45" height="45">
+            <!-- <h2>Heading</h2> -->
+            <!-- <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a> -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-xs-3 pt-3 ml-2">
+            <img class="rounded-circle" src="http://via.placeholder.com/60x60?text=P" alt="Generic placeholder image" width="45" height="45">
+            <!-- <h2>Heading</h2> -->
+            <!-- <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a> -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-xs-3 pt-3 ml-2">
+            <img class="rounded-circle" src="http://via.placeholder.com/60x60?text=V" alt="Generic placeholder image" width="45" height="45">
+            <!-- <h2>Heading</h2> -->
+            <!-- <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a> -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+            <!-- <div class="col-sm-2 py-4">
+              <h4 class="text-white">Shared with</h4> -->
+
+              <!-- <ul class="list-unstyled">
                 <li><a href="#" class="text-white">Follow on Twitter</a></li>
                 <li><a href="#" class="text-white">Like on Facebook</a></li>
                 <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
-            </div>
+              </ul> -->
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -41,7 +74,7 @@
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand">Smart Doc</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="fa fa-user-plus" aria-hidden="true"></span>
           </button>
         </div>
       </div>
@@ -58,7 +91,7 @@
               <input type="file" multiple id="file" @change="processFile($event)" class="custom-file-input">
               <span class="custom-file-control">{uploadFieldName.name}</span>
             </label>
-            <a href="#" id="uploadit" class="btn btn-primary mt-1" v-bind:class="{'disabled': uploadFieldName==''}">Upload</a>
+            <a href="#" id="uploadit" class="btn btn-primary " v-bind:class="{'disabled': uploadFieldName==''}">Upload</a>
           </div>
         </div>
       </section>
